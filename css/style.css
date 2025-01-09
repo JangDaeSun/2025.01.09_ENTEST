@@ -1,0 +1,309 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/Pretendard-Black.woff') format('woff');
+    font-weight: 900;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/Pretendard-ExtraBold.woff') format('woff');
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/Pretendard-Bold.woff') format('woff');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/Pretendard-SemiBold.woff') format('woff');
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/Pretendard-Medium.woff') format('woff');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/Pretendard-Light.woff') format('woff');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/Pretendard-ExtraLight.woff') format('woff');
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/Pretendard-Thin.woff') format('woff');
+    font-weight: 100;
+}
+*{
+    color: inherit;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    color: #1c1d1c;
+    font-family: 'Pretendard', sans-serif;
+}
+.test{
+    border: 1px solid red;
+}
+.flex{
+    display: flex;
+}
+.fb{
+    color: #1c1d1c;
+}
+img{
+    display: block;
+}
+
+#Header{
+    height: 53px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    background: white;
+    z-index: 10;
+}
+.headfix{
+    height: 53px;
+}
+#Header>.flex{
+    width: 90%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+#Header>.flex .logo{
+    height: 70%;
+}
+#Header>.flex ul{
+    font-weight: 700;
+    width: 55%;
+    max-width: 260px;
+    justify-content: space-between;
+}
+
+#Intro{
+    position: relative;
+    height: 747px;
+    max-height: 100vh;
+    width: 100%;
+    color: white;
+    overflow: hidden;
+}
+#Intro>.list,#Intro>.list .slide img{
+    width: 100%;
+    height: 100%;
+}
+#Intro>.list{
+    position: relative;
+    left: 0;
+    display: flex;
+    width: 500%;
+}
+#Intro>.list .slide{
+    width: 100vw;
+    height: 100%;
+    position: relative;
+}
+#Intro>.list .slide img{
+    object-fit: cover;
+    position: absolute;
+    z-index: 0;
+}
+#Intro>.list .slide .txt{
+    position: absolute;
+    z-index: 1;
+    width: 1440px;
+    max-width: 80%;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+#Intro>.list .slide .txt>div{
+    max-width: 528px;
+}
+#Intro>.list .slide .txt .title{
+    font-size: clamp(52px, 6vmax, 71px);
+    font-weight: 800;
+    margin-bottom: 2%;
+    line-height: clamp(65px, 6vmax, 88.75px);
+}
+#Intro>.list .slide .txt .content{
+    font-size: clamp(24px, 3vmax, 31px);
+    font-weight: 200;
+    line-height: clamp(28px, 3vmax, 46.5px);
+}
+#Intro>.btn{
+    position: absolute;
+    z-index: 2;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: clamp(48px, 6vmax, 64px);
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+#Intro>.btn i{
+    cursor: pointer;
+    pointer-events: all;
+}
+
+#Card{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#Card>.list{
+    padding: 158.5px 0;
+    width: 90%;
+    max-width: 1440px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    column-gap: 0px;
+}
+#Card>.list .box{
+    width: 340px;
+    height: 483px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 7px 14px rgba(37, 37, 37, 0.3);
+    transition: .3s;
+}
+#Card>.list .box:hover{
+    scale: 1.1;
+}
+#Card>.list .box:nth-child(n + 5){
+    margin-top: 5%;
+}
+#Card>.list .box img{
+    width: 100%;
+    height: 192px;
+    object-fit: cover;
+}
+#Card>.list .box .txt{
+    height: calc(100% - 192px);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#Card>.list .box .txt .btxt{
+    color: #bdbdbd;
+    font-size: 16px;
+}
+#Card>.list .box .txt .mtxt .title{
+    font-size: 31px;
+    font-weight: 900;
+    margin-bottom: 5%;
+    line-height: 38.75px;
+}
+#Card>.list .box .txt .mtxt .content{
+    font-size: 18px;
+    font-weight: 200;
+    color: #424242;
+    line-height: 27px;
+}
+
+#Custom{
+    position: relative;
+    width: 100%;
+    height: 800px;
+    background: #f5f5f5;
+    overflow: hidden;
+}
+#Custom .list{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 210px;
+    font-weight: 700;
+}
+#Custom .list .site{
+    position: relative;
+    white-space: nowrap;
+    width: 1000px;
+}
+#Custom .list .site:nth-of-type(1){
+    left: 100%;
+}
+#Custom .list .site:nth-of-type(2){
+    left: 100%;
+}
+#Custom .list .site:nth-of-type(3){
+    left: 100%;
+}
+
+#Footer{
+    width: 100%;
+    height: 350px;
+    color: #f5f5f5;
+    background: #1c1d1c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#Footer .content{
+    width: 80%;
+    max-width: 1440px;
+}
+#Footer .content .blogo{
+    width: 254px;
+    margin-bottom: 31px;
+}
+
+@media screen and (max-width:1528px) {
+    #Card>.list .box:nth-child(n + 5) {
+        margin-top: initial;
+    }
+    #Card>.list .box:nth-child(n + 4) {
+        margin-top: 5%;
+    }
+}
+@media screen and (max-width:1150px) {
+    #Card>.list .box:nth-child(n + 4) {
+        margin-top: initial;
+    }
+    #Card>.list .box:nth-child(n + 3) {
+        margin-top: 5%;
+    }
+}
+@media screen and (max-width:772px) {
+    #Card>.list .box:nth-child(n + 3) {
+        margin-top: initial;
+    }
+    #Card>.list .box:nth-child(n + 2) {
+        margin-top: 5%;
+    }
+    #Card>.list{
+        justify-content: space-around;
+    }
+}

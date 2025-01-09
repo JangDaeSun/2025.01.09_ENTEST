@@ -75,7 +75,7 @@ $(function(){
         if (!$('#Intro').is(':hover')) {
             $("#Intro .btn .rbtn").click();
         }
-    }, 3000);
+    }, 5000);
 
     $('#Intro').hover(function() {
         clearInterval(autoSlide);
@@ -84,7 +84,7 @@ $(function(){
             if (!$('#Intro').is(':hover')) {
                 $("#Intro .btn .rbtn").click();
             }
-        }, 3000);
+        }, 5000);
     });
 
     function Site(index, move, duration, reset) {
